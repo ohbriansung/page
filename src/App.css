@@ -1,33 +1,159 @@
-.App {
-  text-align: center;
+/*
+THEME
+red:  #ff5b5b
+blue: #44bdbd
+gray: #353535
+font: https://fonts.googleapis.com/css?family=Germania+One|Source+Code+Pro
+*/
+
+/* Header */
+
+h1,
+h2,
+h3,
+.navbar {
+    font-family: "Germania One", cursive;
+    color: #44bdbd;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero.is-dark .title {
+    font-size: 42px;
+    color: #44bdbd;
 }
 
-.App-link {
-  color: #61dafb;
+.hero.is-dark .subtitle {
+    font-size: 30px;
+    color: #44bdbd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero.is-dark a.navbar-item.is-active span {
+    color: #ff5b5b;
+}
+
+/* Body */
+
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #353535;
+    color: #ffffff;
+}
+
+hr {
+    background-color: #ff5b5b;
+}
+
+.content h2,
+.content h3 {
+    color: #44bdbd;
+}
+
+.table,
+.content table thead td,
+.content table thead th,
+.content table tfoot td,
+.content table tfoot th {
+    background-color: #353535;
+    color: #ffffff;
+}
+
+.table.is-bordered td,
+.table.is-bordered th {
+    border-width: 2px;
+}
+
+.table.is-bordered tr:last-child td,
+.table.is-bordered tr:last-child th {
+    border-bottom-width: 2px;
+}
+
+th {
+    font-weight: bolder;
+}
+
+a,
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #ff5b5b;
+}
+
+.slick-prev:before,
+.slick-next:before,
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    transition: 0.3s;
+}
+
+a:hover,
+a.navigation:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+a.navigation {
+    color: #44bdbd;
+}
+
+.content ul.slick-dots {
+    margin-left: 0;
+}
+
+strong {
+    font-family: "Germania One", cursive;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+a.interest {
+    cursor: default;
+}
+
+a.theme-yellow {
+    color: #f4dd61;
+}
+
+a.theme-green {
+    color: #06d6a0;
+}
+
+a.theme-purple {
+    color: #d796d7;
+}
+
+a.theme-orange {
+    color: #f77f00;
+}
+
+a.theme-blue {
+    color: #75a3bc;
+}
+
+/* Footer */
+
+.hero.is-dark a:not(.button):not(.dropdown-item):not(.tag):hover {
+    color: #ff5b5b;
+}
+
+/* Customized */
+
+svg,
+.prototypes {
+    background-color: #dddddd;
+    display: block;
+    margin: auto;
+    width: 960px;
+    height: 600px;
+}
+
+.profile-photo {
+    width: 420px;
+    height: 420px;
+}
+
+.profile-links {
+    text-align: justify;
+    text-justify: inter-word;
 }
