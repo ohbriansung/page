@@ -1,8 +1,11 @@
 import React from "react";
 
 const NavBarItem = props => {
+    const className = "navbar-item" + (props.item.current ? " is-active" : "");
+
     return (
-        <a className="navbar-item" href="">
+        // eslint-disable-next-line
+        <a className={className} onClick={() => props.onChangeTag(props.item)}>
             <span className="icon">
                 <i className={props.item.icon} />
             </span>

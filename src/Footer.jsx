@@ -32,15 +32,19 @@ class Footer extends Component {
                     <small>
                         <a href="#top">
                             <span className="fas fa-arrow-up" />
-                            <span>Back to Top</span>
+                            <span> Back to Top</span>
                         </a>
                     </small>
-                    <br />
                     <br />
                     {this.state.links.map(function(item, index) {
                         const dot = index === 0 ? "" : " • ";
                         return [dot, <FooterItem key={item.id} item={item} />];
                     })}
+                    <br />
+                    <br />
+                    <p className="footer-note">
+                        Powered by GitHub and React.js
+                    </p>
                 </div>
             </footer>
         );
