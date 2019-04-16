@@ -1,10 +1,18 @@
 import React, { Component } from "react";
 import About from "./components/About";
+import Placeholder from "./components/Placeholder";
 
 class Body extends Component {
-    state = {};
+    components = {
+        About: About,
+        Placeholder: Placeholder
+    };
+
     render() {
-        return <About />;
+        const TagName = this.components[
+            this.props.menuItem.page || "Placeholder"
+        ];
+        return <TagName />;
     }
 }
 

@@ -7,15 +7,34 @@ import "./App.css";
 class App extends Component {
     state = {
         menu: [
-            { id: 0, name: "Home", icon: "far fa-home", current: true },
-            { id: 1, name: "Blog", icon: "far fa-newspaper", current: false },
+            {
+                id: 0,
+                name: "Home",
+                icon: "far fa-home",
+                current: true,
+                page: "Placeholder"
+            },
+            {
+                id: 1,
+                name: "Blog",
+                icon: "far fa-newspaper",
+                current: false,
+                page: "Placeholder"
+            },
             {
                 id: 2,
                 name: "Computer Science",
                 icon: "fas fa-robot",
-                current: false
+                current: false,
+                page: "Placeholder"
             },
-            { id: 3, name: "About Me", icon: "fas fa-user", current: false }
+            {
+                id: 3,
+                name: "About Me",
+                icon: "fas fa-user",
+                current: false,
+                page: "About"
+            }
         ]
     };
 
@@ -44,7 +63,9 @@ class App extends Component {
         return (
             <React.Fragment>
                 <Header menu={this.state.menu} onChangeTag={this.changeTag} />
-                <Body />
+                <Body
+                    menuItem={this.state.menu.filter(item => item.current)[0]}
+                />
                 <Footer />
             </React.Fragment>
         );
