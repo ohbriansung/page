@@ -1,8 +1,8 @@
 import React from "react";
 
-const createCard = (func, item) => {
+const createCard = (onShowDetail, item) => {
     return (
-        <div key={item.id} className="card" onClick={() => func(item)}>
+        <div key={item.id} className="card" onClick={() => onShowDetail(item)}>
             <div className="card-image">
                 <figure className="image is-4by3">
                     <img src={item.img} alt={item.name} />
@@ -25,13 +25,13 @@ const createCard = (func, item) => {
 };
 
 const Card = props => {
-    let max = 3;
+    let numInRow = 3;
     let len =
-        props.content.length % max === 0
-            ? props.content.length / max
-            : parseInt(props.content.length / max) + 1;
+        props.content.length % numInRow === 0
+            ? props.content.length / numInRow
+            : parseInt(props.content.length / numInRow) + 1;
     let content = [...Array(len).keys()];
-    let counts = [...Array(max).keys()];
+    let counts = [...Array(numInRow).keys()];
 
     const result = (
         <div className="rows">

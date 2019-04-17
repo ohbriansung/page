@@ -8,13 +8,9 @@ class Post extends Component {
     };
 
     componentDidMount() {
-        axios
-            .get(
-                "https://raw.githubusercontent.com/ohbriansung/usb_rubber_ducky/master/pi_zero_ducky/README.md"
-            )
-            .then(res => {
-                this.setState({ response: res.data });
-            });
+        axios.get(this.props.item.url).then(res => {
+            this.setState({ response: res.data });
+        });
     }
 
     componentDidUpdate() {

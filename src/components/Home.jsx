@@ -1,16 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "./Card";
 
-class Home extends Component {
-    showDetail = item => {
-        console.log(item);
-    };
+const Home = props => {
+    const content = props.content;
 
-    render() {
-        const content = this.props.content;
-
-        return <Card content={content} onShowDetail={this.showDetail} />;
-    }
-}
+    return <Card content={content} onShowDetail={props.onShowDetail} />;
+};
 
 export default Home;

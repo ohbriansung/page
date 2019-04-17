@@ -28,7 +28,8 @@ class App extends Component {
                 current: false,
                 page: "About"
             }
-        ]
+        ],
+        detail: {}
     };
 
     changeTag = menuItem => {
@@ -50,6 +51,20 @@ class App extends Component {
 
         // setting the state to new menu object
         this.setState({ menu });
+
+        // clearing detail
+        this.setState({ detail: {} });
+    };
+
+    showDetail = detail => {
+        // cloning a menu object, unselecting all page
+        const menu = [...this.state.menu];
+        menu.forEach(function(item) {
+            item.current = false;
+        });
+
+        // setting the state to new menu object, inserting detail
+        this.setState({ menu, detail });
     };
 
     render() {
@@ -58,6 +73,8 @@ class App extends Component {
                 <Header menu={this.state.menu} onChangeTag={this.changeTag} />
                 <Body
                     menuItem={this.state.menu.filter(item => item.current)[0]}
+                    detailItem={this.state.detail}
+                    onShowDetail={this.showDetail}
                 />
                 <Footer />
             </React.Fragment>
