@@ -9,27 +9,20 @@ class App extends Component {
         menu: [
             {
                 id: 0,
-                name: "Home",
-                icon: "far fa-home",
+                name: "Projects",
+                icon: "fas fa-code",
                 current: true,
                 page: "Home"
             },
             {
                 id: 1,
-                name: "Blog",
+                name: "Notes",
                 icon: "far fa-newspaper",
                 current: false,
-                page: "Blog"
+                page: "Notes"
             },
             {
                 id: 2,
-                name: "Computer Science",
-                icon: "fas fa-robot",
-                current: false,
-                page: "ComputerScience"
-            },
-            {
-                id: 3,
                 name: "About Me",
                 icon: "fas fa-user",
                 current: false,

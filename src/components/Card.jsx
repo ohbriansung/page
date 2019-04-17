@@ -2,7 +2,7 @@ import React from "react";
 
 const createCard = (func, item) => {
     return (
-        <div key={item.id} className="card" onClick={() => func(item.url)}>
+        <div key={item.id} className="card" onClick={() => func(item)}>
             <div className="card-image">
                 <figure className="image is-4by3">
                     <img src={item.img} alt={item.name} />
@@ -50,7 +50,7 @@ const Card = props => {
                                     >
                                         {createCard(
                                             props.onShowDetail,
-                                            props.content[i]
+                                            props.content[i + c]
                                         )}
                                     </div>
                                 ) : (

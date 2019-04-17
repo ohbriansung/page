@@ -152,12 +152,15 @@ a.theme-blue {
 
 .image {
     position: initial;
+    background: #ffffff;
 }
 
 span.subtitle {
     font-weight: bolder;
     font-size: 18px;
     color: #ffffff;
+    height: 1px;
+    display: block;
 }
 
 span.tag {
