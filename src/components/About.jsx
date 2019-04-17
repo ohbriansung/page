@@ -40,35 +40,27 @@ class About extends Component {
 
     render() {
         return (
-            <section className="section">
-                <div className="container content">
-                    <div className="media">
-                        <div className="media-left">
-                            <p>
-                                <img
-                                    src={me}
-                                    className="profile-photo"
-                                    alt="me"
-                                />
-                            </p>
-                        </div>
-
-                        <div className="media-content">
-                            <p>
-                                {this.state.bio}
-                                <br />
-                                <br />
-                                [ Interests ]
-                                <br />
-                                {this.state.interests.map(item => [
-                                    <InterestItem key={item.id} item={item} />,
-                                    <br key={"br" + item.id} />
-                                ])}
-                            </p>
-                        </div>
-                    </div>
+            <div className="columns">
+                <div className="column is-one-third">
+                    <p>
+                        <img src={me} className="profile-photo" alt="me" />
+                    </p>
                 </div>
-            </section>
+
+                <div className="column">
+                    <p className="has-text-justified">
+                        {this.state.bio}
+                        <br />
+                        <br />
+                        [ Interests ]
+                        <br />
+                        {this.state.interests.map(item => [
+                            <InterestItem key={item.id} item={item} />,
+                            <br key={"br" + item.id} />
+                        ])}
+                    </p>
+                </div>
+            </div>
         );
     }
 }

@@ -5,10 +5,15 @@ const NavBarItem = props => {
 
     return (
         // eslint-disable-next-line
-        <a className={className} onClick={() => props.onChangeTag(props.item)}>
+        <a
+            className={className}
+            onClick={() => props.onChangeTag(props.item)}
+            data-target="navbar-brand"
+        >
             <span className="icon">
                 <i className={props.item.icon} />
             </span>
+            <span> </span>
             <span>{props.item.name}</span>
         </a>
     );

@@ -65,6 +65,7 @@ hr {
     background-color: #ff5b5b;
 }
 
+.content h1,
 .content h2,
 .content h3 {
     color: #44bdbd;
@@ -140,6 +141,37 @@ a.theme-blue {
     color: #75a3bc;
 }
 
+.row {
+    padding: 0.75rem;
+}
+
+.card {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+.image {
+    position: initial;
+}
+
+span.subtitle {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+span.tag {
+    padding: 0%;
+    border-radius: 0%;
+    background: none;
+    color: #cccccc;
+    font-size: 12px;
+}
+
+time {
+    font-size: 12px;
+}
+
 /* Footer */
 
 .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag):hover {
@@ -166,12 +198,19 @@ svg,
     height: 600px;
 }
 
-.profile-photo {
-    width: 420px;
-    height: 420px;
-}
-
 .profile-links {
     text-align: justify;
     text-justify: inter-word;
+}
+
+span.icon {
+    margin-right: 5px;
+}
+
+code {
+    background: #faf8f0;
+}
+
+pre {
+    background-color: #dddddd;
 }

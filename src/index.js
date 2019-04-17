@@ -27,4 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Toggle the Navbar Burger when selecting pages
+    const $navbarItems = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-item"),
+        0
+    );
+
+    if ($navbarItems.length > 0) {
+        $navbarItems.forEach(el => {
+            el.addEventListener("click", () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                const $self = document.getElementById("main-navbar");
+
+                $target.classList.remove("is-active");
+                $self.classList.remove("is-active");
+            });
+        });
+    }
 });

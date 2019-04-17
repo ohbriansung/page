@@ -13,6 +13,7 @@ const NavBar = props => {
                     <div className="navbar-brand">
                         {/* eslint-disable-next-line */}
                         <a
+                            id="navbar-brand"
                             role="button"
                             className="navbar-burger burger"
                             data-target="main-navbar"

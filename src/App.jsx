@@ -12,21 +12,21 @@ class App extends Component {
                 name: "Home",
                 icon: "far fa-home",
                 current: true,
-                page: "Placeholder"
+                page: "Home"
             },
             {
                 id: 1,
                 name: "Blog",
                 icon: "far fa-newspaper",
                 current: false,
-                page: "Placeholder"
+                page: "Blog"
             },
             {
                 id: 2,
                 name: "Computer Science",
                 icon: "fas fa-robot",
                 current: false,
-                page: "Placeholder"
+                page: "ComputerScience"
             },
             {
                 id: 3,
