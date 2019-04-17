@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Distributed System",
+        "icon": "fas fa-globe-americas",
+        "color": "yellow"
+    },
+    {
+        "id": 1,
+        "name": "Site Reliability",
+        "icon": "fas fa-cubes",
+        "color": "purple"
+    },
+    {
+        "id": 2,
+        "name": "Cybersecurity",
+        "icon": "fas fa-shield-alt",
+        "color": "green"
+    },
+    {
+        "id": 3,
+        "name": "Data Visualization",
+        "icon": "fas fa-chart-area",
+        "color": "orange"
+    },
+    {
+        "id": 4,
+        "name": "Board Games",
+        "icon": "fas fa-chess",
+        "color": "blue"
+    }
+]

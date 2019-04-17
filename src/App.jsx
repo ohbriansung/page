@@ -1,34 +1,16 @@
 import React, { Component } from "react";
+
 import Header from "./Header";
 import Footer from "./Footer";
 import Body from "./Body";
 import "./App.css";
 
+import menuJSON from "./json/menu.json";
+
 class App extends Component {
     state = {
-        menu: [
-            {
-                id: 0,
-                name: "Projects",
-                icon: "fas fa-code",
-                current: true,
-                page: "Projects"
-            },
-            {
-                id: 1,
-                name: "Notes",
-                icon: "far fa-newspaper",
-                current: false,
-                page: "Notes"
-            },
-            {
-                id: 2,
-                name: "About Me",
-                icon: "fas fa-user",
-                current: false,
-                page: "About"
-            }
-        ],
+        // loading menu from menu.json
+        menu: menuJSON,
         detail: {}
     };
 

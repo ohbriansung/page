@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "GitHub",
+        "icon": "fab fa-github",
+        "link": "https://github.com/ohbriansung"
+    },
+    {
+        "id": 1,
+        "name": "LinkedIn",
+        "icon": "fab fa-linkedin",
+        "link": "https://www.linkedin.com/in/ohbriansung"
+    },
+    {
+        "id": 2,
+        "name": "Email",
+        "icon": "fas fa-envelope",
+        "link": "mailto:s254901282002@gmail.com"
+    }
+]

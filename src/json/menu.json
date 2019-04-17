@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "Projects",
+        "icon": "fas fa-code",
+        "current": true,
+        "page": "Projects"
+    },
+    {
+        "id": 1,
+        "name": "Notes",
+        "icon": "far fa-newspaper",
+        "current": false,
+        "page": "Notes"
+    },
+    {
+        "id": 2,
+        "name": "About Me",
+        "icon": "fas fa-user",
+        "current": false,
+        "page": "About"
+    }
+]

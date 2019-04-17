@@ -1,28 +1,10 @@
 import React, { Component } from "react";
 import FooterItem from "./components/FooterItem";
+import linkJSON from "./json/footer.json";
 
 class Footer extends Component {
     state = {
-        links: [
-            {
-                id: 0,
-                name: "GitHub",
-                icon: "fab fa-github",
-                link: "https://github.com/ohbriansung"
-            },
-            {
-                id: 1,
-                name: "LinkedIn",
-                icon: "fab fa-linkedin",
-                link: "https://www.linkedin.com/in/ohbriansung"
-            },
-            {
-                id: 2,
-                name: "Contact",
-                icon: "fas fa-envelope",
-                link: "mailto:s254901282002@gmail.com"
-            }
-        ]
+        links: linkJSON
     };
 
     render() {
