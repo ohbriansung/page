@@ -12,7 +12,7 @@ class App extends Component {
                 name: "Projects",
                 icon: "fas fa-code",
                 current: true,
-                page: "Home"
+                page: "Projects"
             },
             {
                 id: 1,

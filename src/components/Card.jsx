@@ -27,15 +27,15 @@ const createCard = (onShowDetail, item) => {
 const Card = props => {
     let numInRow = 3;
     let len =
-        props.content.length % numInRow === 0
-            ? props.content.length / numInRow
-            : parseInt(props.content.length / numInRow) + 1;
-    let content = [...Array(len).keys()];
+        props.present.length % numInRow === 0
+            ? props.present.length / numInRow
+            : parseInt(props.present.length / numInRow) + 1;
+    let present = [...Array(len).keys()];
     let counts = [...Array(numInRow).keys()];
 
     const result = (
         <div className="rows">
-            {content.map(function(index) {
+            {present.map(function(index) {
                 // for each row
                 const i = index * 3;
                 return (
@@ -43,14 +43,14 @@ const Card = props => {
                         <div className="columns">
                             {counts.map(function(c) {
                                 // for each column
-                                return i + c < props.content.length ? (
+                                return i + c < props.present.length ? (
                                     <div
                                         key={"card" + index + "-" + c}
                                         className="column is-one-third"
                                     >
                                         {createCard(
                                             props.onShowDetail,
-                                            props.content[i + c]
+                                            props.present[i + c]
                                         )}
                                     </div>
                                 ) : (

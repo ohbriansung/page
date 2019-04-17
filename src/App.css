@@ -152,7 +152,7 @@ a.theme-blue {
 
 .image {
     position: initial;
-    background: #ffffff;
+    background: #555555;
 }
 
 span.subtitle {
@@ -173,6 +173,19 @@ span.tag {
 
 time {
     font-size: 12px;
+}
+
+input.input {
+    background: #555555;
+    color: #dddddd;
+}
+
+input.input::placeholder {
+    color: #dddddd;
+}
+
+input.input:focus {
+    border-color: #44bdbd;
 }
 
 /* Footer */

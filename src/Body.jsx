@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import About from "./components/About";
-import Home from "./components/Home";
+import Projects from "./components/Projects";
 import Placeholder from "./components/Placeholder";
 import Post from "./components/Post";
 
@@ -8,7 +8,7 @@ class Body extends Component {
     state = {
         content: [
             {
-                id: 0,
+                id: 201904142014,
                 name: "Ducky Raspberry Pi Zero for Mac",
                 img:
                     "https://raw.githubusercontent.com/ohbriansung/usb_rubber_ducky/master/pi_zero_ducky/img/concept.jpg",
@@ -20,7 +20,29 @@ class Body extends Component {
                     "https://github.com/ohbriansung/usb_rubber_ducky/tree/master/pi_zero_ducky"
             },
             {
-                id: 1,
+                id: 201904101431,
+                name: "San Francisco Tree Maintenance",
+                img:
+                    "https://raw.githubusercontent.com/ohbriansung/data_visualization_hw3/gh-pages/img/screenshot.png",
+                date: "Apr 10, 2019, 2:31 PM PDT",
+                tag: "Data Visualization, D3.js",
+                url:
+                    "https://raw.githubusercontent.com/ohbriansung/data_visualization_hw3/gh-pages/README.md",
+                repo: "https://github.com/ohbriansung/data_visualization_hw3"
+            },
+            {
+                id: 201903190835,
+                name: "SF Fire Department Calls for Service",
+                img:
+                    "https://raw.githubusercontent.com/ohbriansung/data_visualization_mid/gh-pages/img/demo.png",
+                date: "Mar 19, 2019, 8:35 AM PDT",
+                tag: "Data Visualization, D3.js",
+                url:
+                    "https://raw.githubusercontent.com/ohbriansung/data_visualization_mid/gh-pages/README.md",
+                repo: "https://github.com/ohbriansung/data_visualization_mid"
+            },
+            {
+                id: 201810062308,
                 name: "ChordFS",
                 img: "https://i.imgur.com/gW3sp3e.jpg",
                 date: "Oct 6, 2018, 11:08 PM PDT",
@@ -30,7 +52,7 @@ class Body extends Component {
                 repo: "https://github.com/ohbriansung/ChordFS"
             },
             {
-                id: 2,
+                id: 201803181727,
                 name: "Lytnamo",
                 img: "https://i.imgur.com/hboZtow.jpg",
                 date: "May 18, 2018, 5:27 PM PDT",
@@ -40,17 +62,18 @@ class Body extends Component {
                 repo: "https://github.com/ohbriansung/Lytnamo"
             },
             {
-                id: 3,
+                id: 201802222259,
                 name: "Grrrr",
-                img: "https://i.imgur.com/71GE6Ck.png",
-                date: "May 18, 2018, 5:27 PM PDT",
+                img:
+                    "https://raw.githubusercontent.com/ohbriansung/Grrrr/master/img/demo.png",
+                date: "Feb 22, 2018, 10:59 PM PST",
                 tag: "Distributed System, Java",
                 url:
                     "https://raw.githubusercontent.com/ohbriansung/Grrrr/master/README.md",
                 repo: "https://github.com/ohbriansung/Grrrr"
             },
             {
-                id: 4,
+                id: 201712151001,
                 name: "hotelApp",
                 img: "https://i.imgur.com/BhSRHEz.jpg",
                 date: "Dec 15, 2017, 10:01 AM PST",
@@ -59,13 +82,34 @@ class Body extends Component {
                     "https://raw.githubusercontent.com/ohbriansung/hotelApp/master/README.md",
                 repo: "https://github.com/ohbriansung/hotelApp"
             }
-        ]
+        ],
+        present: []
     };
 
     components = {
         About: About,
-        Home: Home,
+        Projects: Projects,
         Placeholder: Placeholder
+    };
+
+    componentWillMount = () => {
+        // cloning the content into present before rendering
+        this.setState({ present: [...this.state.content] });
+    };
+
+    searchChange = value => {
+        value = value.toLowerCase();
+
+        // filtering the content and cloning to present
+        const content = [
+            ...this.state.content.filter(
+                item =>
+                    item.name.toLowerCase().indexOf(value) >= 0 ||
+                    item.tag.toLowerCase().indexOf(value) >= 0
+            )
+        ];
+
+        this.setState({ present: content });
     };
 
     renderPage = () => {
@@ -79,8 +123,9 @@ class Body extends Component {
         return (
             <TagName
                 page={this.props.menuItem.page}
-                content={this.state.content}
+                present={this.state.present}
                 onShowDetail={this.props.onShowDetail}
+                onSearchChange={this.searchChange}
             />
         );
     };
@@ -91,6 +136,7 @@ class Body extends Component {
 
     render() {
         let body = null;
+
         if (this.props.menuItem) {
             body = this.renderPage();
         } else {
