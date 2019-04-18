@@ -12,7 +12,8 @@ class Body extends Component {
         //loading content from contents.json
         content: contents,
         present: [],
-        prePageName: ""
+        prePageName: "",
+        preSearch: ""
     };
 
     components = {
@@ -31,6 +32,10 @@ class Body extends Component {
     };
 
     searchChange = value => {
+        if (!this.props.menuItem) {
+            return;
+        }
+
         value = value.toLowerCase();
 
         // filtering the content and cloning to present
@@ -44,7 +49,7 @@ class Body extends Component {
             )
         ];
 
-        this.setState({ present });
+        this.setState({ present, preSearch: value });
     };
 
     renderPage = () => {
@@ -66,6 +71,11 @@ class Body extends Component {
     };
 
     renderDetail = () => {
+        const preSearch = document.getElementById("searchBar").value;
+
+        if (preSearch !== "") {
+            this.searchChange({ preSearch });
+        }
         return <Post item={this.props.detailItem} />;
     };
 
@@ -79,7 +89,7 @@ class Body extends Component {
     };
 
     componentDidUpdate = () => {
-        if (this.props.menuItem) {
+        if (this.props.menuItem && this.props.menuItem.page === "Page") {
             const name = this.props.menuItem.name.toLowerCase();
 
             // only update the content when page name change
@@ -89,11 +99,16 @@ class Body extends Component {
 
                 // clearing the search value
                 document.getElementById("searchBar").value = "";
+                this.setState({ preSearch: "" });
+            } else {
+                if (this.state.preSearch !== "") {
+                    document.getElementById(
+                        "searchBar"
+                    ).value = this.state.preSearch;
+                }
             }
         }
     };
-
-    componentDidMount = () => {};
 
     render() {
         let body = null;
