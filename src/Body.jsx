@@ -101,6 +101,8 @@ class Body extends Component {
                 document.getElementById("searchBar").value = "";
                 this.setState({ preSearch: "" });
             } else {
+                // if user goes into detail page and goes back to same page before,
+                // the search value would be preserve. Not used for changing pages.
                 if (this.state.preSearch !== "") {
                     document.getElementById(
                         "searchBar"

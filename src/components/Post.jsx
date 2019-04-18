@@ -8,6 +8,7 @@ class Post extends Component {
     };
 
     componentDidMount() {
+        // fetching the raw text from the url
         axios.get(this.props.item.url).then(res => {
             this.setState({ response: res.data });
         });
@@ -30,6 +31,7 @@ class Post extends Component {
     }
 
     render() {
+        // using marked library to render markdown format into html
         const markdown = marked(this.state.response);
         return (
             <div
