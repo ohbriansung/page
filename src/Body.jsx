@@ -1,43 +1,50 @@
 import React, { Component } from "react";
 
 import About from "./components/About";
-import Projects from "./components/Projects";
+import Page from "./components/Page";
 import Placeholder from "./components/Placeholder";
 import Post from "./components/Post";
 
-import projects from "./json/projects.json";
+import contents from "./json/contents.json";
 
 class Body extends Component {
     state = {
-        //loading content from projects.json
-        content: projects,
-        present: []
+        //loading content from contents.json
+        content: contents,
+        present: [],
+        prePageName: ""
     };
 
     components = {
+        Page: Page,
         About: About,
-        Projects: Projects,
         Placeholder: Placeholder
     };
 
-    componentWillMount = () => {
-        // cloning the content into present before rendering
-        this.setState({ present: [...this.state.content] });
+    switchContentSource = name => {
+        if (this.props.menuItem.page === "Page") {
+            // cloning the content into present before rendering
+            this.setState({
+                present: [...this.state.content[name]]
+            });
+        }
     };
 
     searchChange = value => {
         value = value.toLowerCase();
 
         // filtering the content and cloning to present
-        const content = [
-            ...this.state.content.filter(
+        const present = [
+            ...this.state.content[
+                this.props.menuItem.name.toLowerCase()
+            ].filter(
                 item =>
                     item.name.toLowerCase().indexOf(value) >= 0 ||
                     item.tag.toLowerCase().indexOf(value) >= 0
             )
         ];
 
-        this.setState({ present: content });
+        this.setState({ present });
     };
 
     renderPage = () => {
@@ -61,6 +68,32 @@ class Body extends Component {
     renderDetail = () => {
         return <Post item={this.props.detailItem} />;
     };
+
+    componentWillMount = () => {
+        // this happens when the page first load
+        if (this.props.menuItem) {
+            const name = this.props.menuItem.name.toLowerCase();
+            this.setState({ prePageName: name });
+            this.switchContentSource(name);
+        }
+    };
+
+    componentDidUpdate = () => {
+        if (this.props.menuItem) {
+            const name = this.props.menuItem.name.toLowerCase();
+
+            // only update the content when page name change
+            if (this.state.prePageName !== name) {
+                this.setState({ prePageName: name });
+                this.switchContentSource(name);
+
+                // clearing the search value
+                document.getElementById("searchBar").value = "";
+            }
+        }
+    };
+
+    componentDidMount = () => {};
 
     render() {
         let body = null;

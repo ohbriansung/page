@@ -148,11 +148,17 @@ a.theme-blue {
 .card {
     background-color: #555555;
     color: #ffffff;
+    border-radius: 8px;
 }
 
 .image {
     position: initial;
     background: #555555;
+}
+
+.image img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 span.subtitle {
@@ -229,4 +235,8 @@ code {
 
 pre {
     background-color: #dddddd;
+}
+
+.profile-photo {
+    border-radius: 8px;
 }

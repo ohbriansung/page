@@ -4,14 +4,14 @@
         "name": "Projects",
         "icon": "fas fa-code",
         "current": true,
-        "page": "Projects"
+        "page": "Page"
     },
     {
         "id": 1,
         "name": "Notes",
         "icon": "far fa-newspaper",
         "current": false,
-        "page": "Notes"
+        "page": "Page"
     },
     {
         "id": 2,

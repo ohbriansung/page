@@ -1,16 +1,17 @@
 import React from "react";
 import Card from "./Card";
 
-const Projects = props => {
+const Page = props => {
     return (
         <React.Fragment>
             <div className="columns is-centered">
                 <div className="column is-one-third">
                     <input
+                        id="searchBar"
                         className="input"
                         type="text"
                         placeholder="Search Name or Tag"
-                        onChange={event =>
+                        onKeyUp={event =>
                             props.onSearchChange(event.target.value)
                         }
                     />
@@ -22,4 +23,4 @@ const Projects = props => {
     );
 };
 
-export default Projects;
+export default Page;
