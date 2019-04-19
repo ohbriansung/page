@@ -76,7 +76,13 @@ class Body extends Component {
         if (preSearch !== "") {
             this.searchChange({ preSearch });
         }
-        return <Post item={this.props.detailItem} />;
+        return (
+            <Post
+                item={this.props.detailItem}
+                onGoBack={this.props.onGoBack}
+                prePageName={this.state.prePageName}
+            />
+        );
     };
 
     componentWillMount = () => {

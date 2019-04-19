@@ -8,7 +8,7 @@
     },
     {
         "id": 1,
-        "name": "Notes",
+        "name": "Blogs",
         "icon": "far fa-newspaper",
         "current": false,
         "page": "Page"

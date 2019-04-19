@@ -49,6 +49,19 @@ class App extends Component {
         this.setState({ menu, detail });
     };
 
+    goBack = prePageName => {
+        // cloning a menu object, selecting the previous page
+        const menu = [...this.state.menu];
+        menu.forEach(function(item) {
+            if (item.name.toLowerCase() === prePageName) {
+                item.current = true;
+            }
+        });
+
+        // setting the state to new menu object, empty the detail
+        this.setState({ menu, detail: {} });
+    };
+
     render() {
         return (
             <React.Fragment>
@@ -57,6 +70,7 @@ class App extends Component {
                     menuItem={this.state.menu.filter(item => item.current)[0]}
                     detailItem={this.state.detail}
                     onShowDetail={this.showDetail}
+                    onGoBack={this.goBack}
                 />
                 <Footer />
             </React.Fragment>

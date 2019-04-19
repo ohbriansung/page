@@ -25,7 +25,7 @@ class Footer extends Component {
                     <br />
                     <br />
                     <p className="footer-note">
-                        Powered by GitHub Pages and ReactJS
+                        Powered by ReactJS and GitHub Pages
                     </p>
                 </div>
             </footer>
