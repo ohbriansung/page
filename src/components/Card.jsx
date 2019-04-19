@@ -4,7 +4,7 @@ const createCard = (onShowDetail, item) => {
     return (
         <div key={item.id} className="card" onClick={() => onShowDetail(item)}>
             <div className="card-image">
-                <figure className="image is-4by3">
+                <figure className="image is-3by2">
                     <img src={item.img} alt={item.name} />
                 </figure>
             </div>
