@@ -24,6 +24,10 @@ h3,
     justify-content: center;
 }
 
+.hero-body {
+    padding: 3rem 1.5rem 1rem 1.5rem;
+}
+
 .hero.is-dark .title {
     font-size: 42px;
     color: #44bdbd;

@@ -4,7 +4,21 @@ import linkJSON from "./json/footer.json";
 
 class Footer extends Component {
     state = {
-        links: linkJSON
+        links: linkJSON,
+        mobile: false
+    };
+
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+
+    resize = () => {
+        const mobile = window.innerWidth <= 760;
+
+        if (mobile !== this.state.mobile) {
+            this.setState({ mobile });
+        }
     };
 
     render() {
@@ -23,8 +37,9 @@ class Footer extends Component {
                         return [dot, <FooterItem key={item.id} item={item} />];
                     })}
                     <br />
-                    <br />
                     <p className="footer-note">
+                        Copyright (c) 2019 Chien-Yu Sung
+                        {this.state.mobile ? <br /> : " | "}
                         Powered by ReactJS and GitHub Pages
                     </p>
                 </div>
