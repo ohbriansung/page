@@ -9,15 +9,14 @@ const Page = props => {
                     <input
                         id="searchBar"
                         className="input"
-                        type="text"
+                        type="search"
                         placeholder="Search Name or Tag"
-                        onKeyUp={event =>
+                        onChange={event =>
                             props.onSearchChange(event.target.value)
                         }
                     />
                 </div>
             </div>
-            <br />
             <Card present={props.present} onShowDetail={props.onShowDetail} />
         </React.Fragment>
     );

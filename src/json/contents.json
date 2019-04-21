@@ -5,7 +5,7 @@
             "name": "Ducky Raspberry Pi Zero for Mac",
             "img": "https://raw.githubusercontent.com/ohbriansung/usb_rubber_ducky/master/pi_zero_ducky/img/concept.jpg",
             "date": "Apr 16, 2019, 8:14 PM PDT",
-            "tag": "Cybersecurity, Raspberry Pi",
+            "tag": "Cybersecurity, Raspberry Pi, Bash",
             "url": "https://raw.githubusercontent.com/ohbriansung/usb_rubber_ducky/master/pi_zero_ducky/README.md",
             "repo": "https://github.com/ohbriansung/usb_rubber_ducky/tree/master/pi_zero_ducky"
         },
@@ -59,7 +59,7 @@
             "name": "hotelApp",
             "img": "https://i.imgur.com/BhSRHEz.jpg",
             "date": "Dec 15, 2017, 10:01 AM PST",
-            "tag": "Web Application, Java",
+            "tag": "Web Application, Java, MySQL",
             "url": "https://raw.githubusercontent.com/ohbriansung/hotelApp/master/README.md",
             "repo": "https://github.com/ohbriansung/hotelApp"
         }
@@ -70,7 +70,7 @@
             "name": "Honeypot - SSH",
             "img": "https://raw.githubusercontent.com/ohbriansung/honeypot/master/ssh-pot2/honeypot.jpg",
             "date": "Mar 20, 2019, 12:24 PM PDT",
-            "tag": "Cybersecurity",
+            "tag": "Cybersecurity, Bash",
             "url": "https://raw.githubusercontent.com/ohbriansung/honeypot/master/ssh-pot2/README.md",
             "repo": "https://github.com/ohbriansung/honeypot/tree/master/ssh-pot2"
         }

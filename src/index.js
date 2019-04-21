@@ -4,6 +4,8 @@ import App from "./App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
+console.log(navigator.appVersion);
+
 // Bavbar burger: https://bulma.io/documentation/components/navbar/#navbar-menu
 document.addEventListener("DOMContentLoaded", () => {
     // Get all "navbar-burger" elements

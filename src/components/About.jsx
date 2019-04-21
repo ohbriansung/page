@@ -10,32 +10,83 @@ class About extends Component {
             <b key="b">Taiwanese</b>,
             "! Currently, a 2nd year Master student in Computer Science at University of San Francisco who is graduating on May 18, 2019."
         ],
-        interests: about
+        interests: about.interests,
+        skills: about.skills,
+        knowledge: about.knowledge,
+        levels: about.levels
+    };
+
+    iterator = (items, name) => {
+        const levels = this.state.levels;
+
+        const result = items.map(function(item, index) {
+            return (
+                <span
+                    key={name + "-" + index}
+                    className={
+                        levels.filter(l => l.level === item.level)[0].style
+                    }
+                >
+                    {item.name + (index === items.length - 1 ? "" : ", ")}
+                </span>
+            );
+        });
+
+        return result;
     };
 
     render() {
         return (
-            <div className="columns">
-                <div className="column is-one-third">
-                    <p>
-                        <img src={me} className="profile-photo" alt="me" />
-                    </p>
+            <React.Fragment>
+                <div className="columns">
+                    <div className="column is-one-third">
+                        <p>
+                            <img src={me} className="profile-photo" alt="me" />
+                        </p>
+                    </div>
+
+                    <div className="column">
+                        <p className="has-text-justified">
+                            {this.state.bio}
+                            <br />
+                            <br />
+                            [ Interests ]
+                            <br />
+                            {this.state.interests.map(item => [
+                                <InterestItem key={item.id} item={item} />,
+                                <br key={"br" + item.id} />
+                            ])}
+                        </p>
+                    </div>
                 </div>
 
-                <div className="column">
-                    <p className="has-text-justified">
-                        {this.state.bio}
-                        <br />
-                        <br />
-                        [ Interests ]
-                        <br />
-                        {this.state.interests.map(item => [
-                            <InterestItem key={item.id} item={item} />,
-                            <br key={"br" + item.id} />
-                        ])}
-                    </p>
-                </div>
-            </div>
+                <hr className="container" />
+
+                <h3 className="subtitle">Skills and Knowledge</h3>
+
+                <p>
+                    <i class="fas fa-atlas" />
+                    &nbsp;
+                    {this.iterator(this.state.skills, "skill")}
+                </p>
+
+                <p>
+                    <i class="fas fa-check-square" />
+                    &nbsp;
+                    {this.iterator(this.state.knowledge, "knowledge")}
+                </p>
+
+                {this.state.levels.map(function(l) {
+                    return [
+                        <React.Fragment key={"level-" + l.level}>
+                            <i className={"fas fa-square " + l.style} />
+                            &nbsp;
+                            {l.name}
+                            <br />
+                        </React.Fragment>
+                    ];
+                })}
+            </React.Fragment>
         );
     }
 }

@@ -34,11 +34,6 @@ h3,
     text-align: center;
 }
 
-.hero.is-dark .subtitle {
-    font-size: 30px;
-    color: #44bdbd;
-}
-
 .hero.is-dark a.navbar-item.is-active span {
     color: #ff5b5b;
 }
@@ -153,6 +148,12 @@ a.theme-blue {
     background-color: #555555;
     color: #ffffff;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transition: 0.3s ease;
+    transform: scale(1.02);
 }
 
 .image {
@@ -186,7 +187,7 @@ time {
 }
 
 input.input {
-    background: #555555;
+    background: #666666;
     color: #dddddd;
 }
 
@@ -243,4 +244,22 @@ pre {
 
 .profile-photo {
     border-radius: 8px;
+}
+
+.content .subtitle {
+    color: #ffffff;
+}
+
+/* Colors */
+
+.is-red {
+    color: #ff5b5b;
+}
+
+.is-red-lite {
+    color: #ff9696;
+}
+
+.is-red-dark {
+    color: #ba4343;
 }
