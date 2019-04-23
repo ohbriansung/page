@@ -66,6 +66,15 @@
     ],
     "blogs": [
         {
+            "id": 201904221801,
+            "name": "Approach To Deal With Overdraw",
+            "img": "https://raw.githubusercontent.com/ohbriansung/data_visualization_talk/master/img/cover.png",
+            "date": "Apr 22, 2019, 6:01 PM PDT",
+            "tag": "Data Visualization",
+            "url": "https://raw.githubusercontent.com/ohbriansung/data_visualization_talk/master/README.md",
+            "repo": "https://github.com/ohbriansung/data_visualization_talk"
+        },
+        {
             "id": 201903201224,
             "name": "Honeypot - SSH",
             "img": "https://raw.githubusercontent.com/ohbriansung/honeypot/master/ssh-pot2/honeypot.jpg",
