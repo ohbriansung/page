@@ -65,13 +65,13 @@ class About extends Component {
                 <h3 className="subtitle">Skills and Knowledge</h3>
 
                 <p>
-                    <i class="fas fa-atlas" />
+                    <i className="fas fa-atlas" />
                     &nbsp;
                     {this.iterator(this.state.skills, "skill")}
                 </p>
 
                 <p>
-                    <i class="fas fa-check-square" />
+                    <i className="fas fa-check-square" />
                     &nbsp;
                     {this.iterator(this.state.knowledge, "knowledge")}
                 </p>

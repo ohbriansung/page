@@ -50,7 +50,7 @@
     "knowledge": [
         { "name": "Linux", "level": 0 },
         { "name": "Git", "level": 0 },
-        { "name": "Docker", "level": 1 },
+        { "name": "Docker", "level": 0 },
         { "name": "Spring", "level": 1 },
         { "name": "Flask", "level": 1 },
         { "name": "Django", "level": 1 },
