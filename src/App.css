@@ -199,6 +199,16 @@ input.input:focus {
     border-color: #44bdbd;
 }
 
+.post img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post a img {
+    display: inherit;
+}
+
 /* Footer */
 
 .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag):hover {
@@ -215,20 +225,6 @@ p.footer-note {
 }
 
 /* Customized */
-
-svg,
-.prototypes {
-    background-color: #dddddd;
-    display: block;
-    margin: auto;
-    width: 960px;
-    height: 600px;
-}
-
-.profile-links {
-    text-align: justify;
-    text-justify: inter-word;
-}
 
 span.icon {
     margin-right: 5px;
