@@ -13,7 +13,7 @@ Therefore, I wanted to provide the access to both sides and I wanted to have a m
 This website was built with React.js and hosted with GitHub Pages.
 The backend of this website is actually GitHub.
 The contents on this website are not hard coded in the source code or any file in this repository.
-You will be able to understand this part later in this article.
+You will be able to understand this later in this article.
 
 # TBA
 

@@ -8,7 +8,11 @@ class About extends Component {
         bio: [
             "An enthusiastic and responsible man with ambition and creativity. Capable of working as a dedicated team member as well as an independent initiative taker. Proud ",
             <b key="b">Taiwanese</b>,
-            "! Currently, a 2nd year Master student in Computer Science at University of San Francisco who is graduating on May 18, 2019."
+            "! Graduated from University of San Francisco, Master of Science in Computer Science, in May 2019. ",
+            "Currently working at Fortinet as a Software Engineer 2, one of the core developers on the Cloud product team.",
+            <br />,
+            <br />,
+            "I like to break things because I want to know how they work!"
         ],
         interests: about.interests,
         skills: about.skills,
