@@ -8,8 +8,9 @@ class About extends Component {
         bio: [
             "An enthusiastic and responsible man with ambition and creativity. Capable of working as a dedicated team member as well as an independent initiative taker. Proud ",
             <b key="b">Taiwanese</b>,
-            "! Graduated from University of San Francisco, Master of Science in Computer Science, in May 2019. ",
-            "Currently working at Fortinet as a Software Engineer 2, one of the core developers on the Cloud product team.",
+            "! Graduated from University of San Francisco, Master in Computer Science. ",
+            "Currently working at Amazon Web Services as a Software Engineer. ",
+            "Former Software Engineer at Fortinet.",
             <br />,
             <br />,
             "I like to break things because I want to know how they work!"
