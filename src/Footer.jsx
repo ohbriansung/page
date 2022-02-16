@@ -38,7 +38,7 @@ class Footer extends Component {
                     })}
                     <br />
                     <p className="footer-note">
-                        Copyright (c) 2019, 2022 Chien-Yu Sung
+                        Copyright (c) 2019-2022 Chien-Yu Sung
                         {this.state.mobile ? <br /> : " | "}
                         Powered by ReactJS and GitHub Pages
                     </p>

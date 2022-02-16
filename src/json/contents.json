@@ -1,6 +1,15 @@
 {
     "projects": [
         {
+            "id": 202202151230,
+            "name": "An Easy Way to Maintain Both GitHub Repo & Portfolio",
+            "img": "https://raw.githubusercontent.com/ohbriansung/page/master/src/img/cover.jpeg",
+            "date": "Feb 15, 2022, 08:30 PM PDT",
+            "tag": "ReactJS, GitHub Pages, Markdown",
+            "url": "https://raw.githubusercontent.com/ohbriansung/page/master/README.md",
+            "repo": "https://github.com/ohbriansung/page"
+        },
+        {
             "id": 201904142014,
             "name": "Ducky Raspberry Pi Zero for Mac",
             "img": "https://raw.githubusercontent.com/ohbriansung/usb_rubber_ducky/master/pi_zero_ducky/img/concept.jpg",
