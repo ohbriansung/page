@@ -38,13 +38,13 @@ For example, the JSON definition and the schema of the `Ducky Raspberry Pi Zero 
 }
 ```
 
-* *"projects"* - A dictionary or map object defined in "porjects" list is a post under Projects page. Same logic for Blogs page, there is a "blogs" list
-* *"id" & "date"* - They are simply the timestamp of the post and "date" is a human readable version
-* *"name"* - The title of the post. Searchable on the website
-* *"img"* - The link to the image for the post
-* *"tag"* - The keywords that can be used to search on the website
-* *"url"* - The link to the README markdown file of a GitHub repository or a Gist
-* *"repo"* - The link to the GitHub repository of the post
+* _"projects"_ - A dictionary or map object defined in "porjects" list is a post under Projects page. Same logic for Blogs page, there is a "blogs" list
+* _"id" & "date"_ - They are simply the timestamp of the post and "date" is a human readable version
+* _"name"_ - The title of the post. Searchable on the website
+* _"img"_ - The link to the image for the post
+* _"tag"_ - The keywords that can be used to search on the website
+* _"url"_ - The link to the README markdown file of a GitHub repository or a Gist
+* _"repo"_ - The link to the GitHub repository of the post
 
 ## Markdown to HTML
 
