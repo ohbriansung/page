@@ -10,7 +10,7 @@ Therefore, I wanted to provide the access to both and I wanted to have a more ef
 
 ## Introduction
 
-This website was built with **React.js** [0] and hosted with **GitHub Pages** [1].
+This website was built with *React.js* [0] and hosted with *GitHub Pages* [1].
 The backend of this website is actually GitHub.
 This repository only contains ReactJS code, JSON definitions and images.
 The contents \(projects and blogs\) on this website are not hard coded in the source code or any file in this repository.
@@ -38,17 +38,17 @@ For example, the JSON definition and the schema of the `Ducky Raspberry Pi Zero 
 }
 ```
 
-* **"projects"** - A dictionary or map object defined in "porjects" list is a post under Projects page. Same logic for Blogs page, there is a "blogs" list
-* **"id" & "date"** - They are simply the timestamp of the post and "date" is a human readable version
-* **"name"** - The title of the post. Searchable on the website
-* **"img"** - The link to the image for the post
-* **"tag"** - The keywords that can be used to search on the website
-* **"url"** - The link to the README markdown file of a GitHub repository or a Gist
-* **"repo"** - The link to the GitHub repository of the post
+* *"projects"* - A dictionary or map object defined in "porjects" list is a post under Projects page. Same logic for Blogs page, there is a "blogs" list
+* *"id" & "date"* - They are simply the timestamp of the post and "date" is a human readable version
+* *"name"* - The title of the post. Searchable on the website
+* *"img"* - The link to the image for the post
+* *"tag"* - The keywords that can be used to search on the website
+* *"url"* - The link to the README markdown file of a GitHub repository or a Gist
+* *"repo"* - The link to the GitHub repository of the post
 
 ## Markdown to HTML
 
-In each post component, I used **Axios** [2] library to fetch the markdown raw text into `state.response` using the **"url"** defined above.
+In each post component, I used *Axios* [2] library to fetch the markdown raw text into `state.response` using the *"url"* defined above.
 
 ```JavaScript
 componentDidMount() {
@@ -58,7 +58,7 @@ componentDidMount() {
 }
 ```
 
-After getting the markdown content, I used **Marked** [3] library to convert the markdown text into HTML and then set the result into a `<div>`. The result would be what you saw on my website.
+After getting the markdown content, I used *Marked* [3] library to convert the markdown text into HTML and then set the result into a `<div>`. The result would be what you saw on my website.
 
 ```JavaScript
 render() {
