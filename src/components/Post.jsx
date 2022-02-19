@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import marked from "marked";
+import { marked } from "marked";
 
 class Post extends Component {
     state = {
@@ -36,7 +36,7 @@ class Post extends Component {
 
     render() {
         // using marked library to render markdown format into html
-        const markdown = marked(this.state.response);
+        const markdown = marked.parse(this.state.response);
         return (
             <React.Fragment>
                 <div className="level-right">

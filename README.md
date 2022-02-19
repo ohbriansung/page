@@ -62,7 +62,7 @@ After getting the markdown content, I used *Marked* [3] library to convert the m
 
 ```JavaScript
 render() {
-    const markdown = marked(this.state.response);
+    const markdown = marked.parse(this.state.response);
     return (...);
 }
 ```
