@@ -9,8 +9,8 @@ class About extends Component {
             "An enthusiastic and responsible man with ambition and creativity. Capable of working as a dedicated team member as well as an independent initiative taker. Proud ",
             <b key="b">Taiwanese</b>,
             "! Graduated from University of San Francisco, Master in Computer Science. ",
-            "Currently working at Amazon Web Services as a Software Engineer. ",
-            "Former Software Engineer at Fortinet.",
+            "Currently working at Qumulo as a Software Engineer. ",
+            "Former Software Engineer at Amazon Web Services.",
             <br />,
             <br />,
             "I like to break things because I want to know how they work!"
