@@ -3,7 +3,7 @@
     "version": "1.4.2",
     "private": true,
     "dependencies": {
-        "axios": "^0.21.1",
+        "axios": "^0.30.0",
         "i": "^0.3.7",
         "marked": "^4.0.12",
         "npm": "^9.8.0",
