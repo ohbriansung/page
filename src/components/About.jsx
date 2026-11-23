@@ -6,7 +6,7 @@ import about from "../json/about.json";
 class About extends Component {
     state = {
         bio: [
-            "Retired technical leader. I am doing my own stuffs and managing family office with AI now."
+            "Retired technical leader. I am doing my own stuffs with AI now."
         ],
         interests: about.interests,
         skills: about.skills,
