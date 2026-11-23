@@ -2,27 +2,27 @@
     "interests": [
         {
             "id": 0,
+            "name": "Agentic AI Development",
+            "icon": "fas fa-cogs",
+            "color": "yellow"
+        },
+        {
+            "id": 1,
             "name": "Distributed System",
             "icon": "fas fa-globe-americas",
             "color": "yellow"
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "Site Reliability",
             "icon": "fas fa-cubes",
             "color": "purple"
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "Cybersecurity",
             "icon": "fas fa-shield-alt",
             "color": "green"
-        },
-        {
-            "id": 3,
-            "name": "Data Visualization",
-            "icon": "fas fa-chart-area",
-            "color": "orange"
         },
         {
             "id": 4,
@@ -32,35 +32,28 @@
         }
     ],
     "skills": [
-        { "name": "Java", "level": 0 },
+        { "name": "JavaSript", "level": 0 },
+        { "name": "TypeSript", "level": 0 },
+        { "name": "React.js", "level": 0 },
+        { "name": "Node.js", "level": 0 },
         { "name": "Python", "level": 0 },
+        { "name": "Java", "level": 0 },
         { "name": "SQL", "level": 0 },
         { "name": "Bash", "level": 0 },
-        { "name": "JavaScript", "level": 1 },
-        { "name": "D3.js", "level": 1 },
-        { "name": "React.js", "level": 1 },
         { "name": "HTML5", "level": 1 },
-        { "name": "CSS3", "level": 1 },
-        { "name": "C", "level": 1 },
-        { "name": "Golang", "level": 2 },
-        { "name": "PHP", "level": 2 },
-        { "name": "C#", "level": 2 },
-        { "name": "Assembly Language", "level": 2 }
+        { "name": "CSS3", "level": 1 }
     ],
     "knowledge": [
+        { "name": "Agentic AI Development", "level": 0 },
+        { "name": "Distributed Systems", "level": 0 },
+        { "name": "Cloud Infrasturcture", "level": 0 },
         { "name": "Linux", "level": 0 },
-        { "name": "Git", "level": 0 },
         { "name": "Docker", "level": 0 },
-        { "name": "Spring", "level": 1 },
-        { "name": "Flask", "level": 1 },
-        { "name": "Django", "level": 1 },
-        { "name": "Kubernetes", "level": 1 },
-        { "name": "AWS", "level": 1 },
-        { "name": "Spark", "level": 2 },
-        { "name": "Pandas", "level": 2 },
-        { "name": "Hadoop", "level": 2 },
-        { "name": "ZooKeeper", "level": 2 },
-        { "name": "Terraform", "level": 2 }
+        { "name": "Git", "level": 0 },
+        { "name": "Terraform", "level": 0 },
+        { "name": "AWS", "level": 0 },
+        { "name": "Azure", "level": 0 },
+        { "name": "Kubernetes", "level": 1 }
     ],
     "levels": [
         { "level": 0, "name": "Advanced", "style": "is-red-lite" },
