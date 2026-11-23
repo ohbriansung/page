@@ -6,14 +6,7 @@ import about from "../json/about.json";
 class About extends Component {
     state = {
         bio: [
-            "An enthusiastic and responsible man with ambition and creativity. Capable of working as a dedicated team member as well as an independent initiative taker. Proud ",
-            <b key="b">Taiwanese</b>,
-            "! Graduated from University of San Francisco, Master in Computer Science. ",
-            "Currently working at Qumulo as a Software Engineer. ",
-            "Former Software Engineer at Amazon Web Services.",
-            <br />,
-            <br />,
-            "I like to break things because I want to know how they work!"
+            "Retired technical leader. I am doing my own stuffs and managing family office with AI now."
         ],
         interests: about.interests,
         skills: about.skills,
